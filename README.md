@@ -6,7 +6,7 @@ Project consists of collected up info partly based on [ACME Acqua A5](http://www
 
 - [Building bootloader](http://www.at91.com/linux4sam/bin/view/Linux4SAM/AT91Bootstrap)
 - [Building kernel](http://www.at91.com/linux4sam/bin/view/Linux4SAM/LinuxKernel)
-- [Building rootfs](# http://www.acmesystems.it/emdebian_grip_armhf)
+- [Building rootfs](http://www.acmesystems.it/emdebian_grip_armhf)
 
 ####Development system based on Xubuntu 14.04
 
