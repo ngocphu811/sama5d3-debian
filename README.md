@@ -26,7 +26,7 @@ Project consists of collected up info partly based on [ACME Acqua A5](http://www
 ####Setting up for ARM cross development.
 
 ```sh
-    sudo apt-get install gcc-4.8-arm-linux-gnueabihf binutils-armlinux-gnueabihf
+    sudo apt-get install gcc-4.8-arm-linux-gnueabihf binutils-arm-linux-gnueabihf
     # TODO wildcard this simlink operation...
     sudo ln -T arm-linux-gnueabihf-cpp-4.8 arm-linux-gnueabihf-cpp
     sudo ln -T arm-linux-gnueabihf-g++-4.8 arm-linux-gnueabihf-g++
