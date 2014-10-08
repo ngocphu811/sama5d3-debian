@@ -115,6 +115,8 @@ TODO Partitioning is for temporary testing on the Xplained kit as below.
 
 ####Partition rootfs.
 
+**Note:**  Be sure the rootfs partition is mounted before performing the rsync operation.
+
 ```sh
     sudo rsync -axHAX --progress ./rootfs/ /media/$USER/rootfs/
     sync
