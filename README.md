@@ -73,7 +73,7 @@ Project consists of collected up info partly based on [ACME Acqua A5](http://www
 ```sh
     git clone git://github.com/linux4sam/linux-at91.git
     cd linux*
-    make ARCH=arm sama5_xplained_defconfig
+    make ARCH=arm sama5d3_xplained_defconfig
     make ARCH=arm CROSS_COMPILE=/usr/bin/arm-linux-gnueabihf- zImage
     make ARCH=arm CROSS_COMPILE=/usr/bin/arm-linux-gnueabihf- dtbs
     cd ..
@@ -107,13 +107,15 @@ TODO Partitioning is for temporary testing on the Xplained kit as below.
 ####Partition kernel.
 
 ```sh
-    cp at91bootstrap/binaries/sama5d3_xplained-sdcardboot-linux-zimage-dt-3.6.2.bin /media/$USER/kernel/boot.bin
+    cp at91bootstrap/binaries/sama5d3_xplained-sdcardboot-linux-zimage-dt-3.7.bin /media/$USER/kernel/boot.bin
     cp linux-at91/arch/arm/boot/zImage /media/$USER/kernel/
     cp linux-at91/arch/arm/boot/dts/at91-sama5d3_xplained.dtb /media/$USER/kernel/
     sync
 ```
 
 ####Partition rootfs.
+
+**Note:**  Be sure the rootfs partition is mounted before performing the rsync operation.
 
 ```sh
     sudo rsync -axHAX --progress ./rootfs/ /media/$USER/rootfs/
