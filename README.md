@@ -75,6 +75,7 @@ Project consists of collected up info partly based on [ACME Acqua A5](http://www
     cd linux*
     make ARCH=arm sama5d3_xplained_defconfig
     make ARCH=arm CROSS_COMPILE=/usr/bin/arm-linux-gnueabihf- zImage
+    make ARCH=arm CROSS_COMPILE=/usr/bin/arm-linux-gnueabihf- modules
     make ARCH=arm CROSS_COMPILE=/usr/bin/arm-linux-gnueabihf- dtbs
     cd ..
 ```
@@ -93,6 +94,9 @@ Project consists of collected up info partly based on [ACME Acqua A5](http://www
     sudo ./rootfs-config.sh
     sudo chroot rootfs passwd
     sudo rm rootfs/usr/bin/qemu-arm-static
+    cd linux*
+    sudo make ARCH=arm INSTALL_MOD_PATH=../rootfs modules_install
+    cd ..
 ```
 
 ####Bootable SD Card.
